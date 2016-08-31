@@ -1,0 +1,12 @@
+[submodule "external/GMXVirtualTileLayer"]
+	path = external/GMXVirtualTileLayer
+	url = git@github.com:ScanEx/GMXVirtualTileLayer.git
+[submodule "external/GMXClusterLayer"]
+	path = external/GMXClusterLayer
+	url = git@github.com:ScanEx/GMXClusterLayer.git
+[submodule "external/GMXPluginGFW"]
+	path = external/GMXPluginGFW
+	url = git@github.com:ScanEx/GMXPluginGFW.git
+[submodule "external/FireVirtualLayer"]
+	path = external/FireVirtualLayer
+	url = git@github.com:ScanEx/FireVirtualLayer.git
