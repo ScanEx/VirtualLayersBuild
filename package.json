@@ -1,0 +1,14 @@
+{
+  "name": "gmx-virtual-layers-build",
+  "version": "0.0.1",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+      "build": "webpack entry.js dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^1.13.2"
+  }
+}
