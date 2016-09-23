@@ -23,7 +23,7 @@
             const map = L.map(document.body).setView([50.0, 50.0], 4)
             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map)
 
-            L.gmx.loadMap('37TYY').then(({ layersByID, rawTree }) => {
+            L.gmx.loadMap('E7FDC4AA37E94F8FB7F7DA8D62D92D2E').then(({ layersByID, rawTree }) => {
                 let overlays = {}
                 Object.keys(layersByID).map((layerId) => {
                     const layer = layersByID[layerId]
@@ -35,6 +35,8 @@
                 L.control.layers([], overlays).addTo(map);
 
                 window.lh = layersByID
+            }, (err) => {
+                console.error('failed to load map', err)
             })
 
             function findLayerProperties(tree, layerId) {
