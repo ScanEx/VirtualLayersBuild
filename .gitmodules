@@ -10,3 +10,6 @@
 [submodule "external/FireVirtualLayer"]
 	path = external/FireVirtualLayer
 	url = git@github.com:ScanEx/FireVirtualLayer.git
+[submodule "external/leaflet-GIBS"]
+	path = external/leaflet-GIBS
+	url = git@github.com:aparshin/leaflet-GIBS.git
