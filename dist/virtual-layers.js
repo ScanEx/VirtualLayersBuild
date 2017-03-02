@@ -242,11 +242,11 @@
 	        },
 	
 	        createPopup: function createPopup(_ref) {
-	            var propertiesHash = _ref.parsedProperties;
-	            var _ref$item = _ref.item;
-	            var id = _ref$item.id;
-	            var propertiesArr = _ref$item.properties;
-	            var dataLayer = _ref.layer;
+	            var propertiesHash = _ref.parsedProperties,
+	                _ref$item = _ref.item,
+	                id = _ref$item.id,
+	                propertiesArr = _ref$item.properties,
+	                dataLayer = _ref.layer;
 	
 	            var balloonData = dataLayer._gmx.styleManager.getItemBalloon(id);
 	
@@ -267,9 +267,9 @@
 	        },
 	
 	        _onMapZoomend: function _onMapZoomend(le) {
-	            var _map = this._map;
-	            var _markerClusterGroup = this._markerClusterGroup;
-	            var options = this.options;
+	            var _map = this._map,
+	                _markerClusterGroup = this._markerClusterGroup,
+	                options = this.options;
 	
 	            var hl = _map.hasLayer(_markerClusterGroup);
 	            if (typeof options.minZoom === 'string' && _map.getZoom() < options.minZoom / 1) {
@@ -322,9 +322,9 @@
 	            // this._vectorTileItemsProperties = {}
 	
 	            var markers = data.added.map(function (_ref2) {
-	                var id = _ref2.id;
-	                var properties = _ref2.properties;
-	                var parsedStyleKeys = _ref2.item.parsedStyleKeys;
+	                var id = _ref2.id,
+	                    properties = _ref2.properties,
+	                    parsedStyleKeys = _ref2.item.parsedStyleKeys;
 	
 	                // this._vectorTileItemsProperties[id] = dataLayer.getItemProperties(properties)
 	                var itemGeoJson = properties[properties.length - 1];
@@ -389,9 +389,9 @@
 	        },
 	
 	        _popupOnClustersMarkerMouseover: function _popupOnClustersMarkerMouseover(_ref3) {
-	            var marker = _ref3.layer;
-	            var latlng = _ref3.latlng;
-	            var originalEvent = _ref3.originalEvent;
+	            var marker = _ref3.layer,
+	                latlng = _ref3.latlng,
+	                originalEvent = _ref3.originalEvent;
 	
 	            if (!this.options.openPopupOnHover) {
 	                return;
@@ -416,9 +416,9 @@
 	        },
 	
 	        _popupOnClustersMarkerClick: function _popupOnClustersMarkerClick(_ref4) {
-	            var marker = _ref4.layer;
-	            var latlng = _ref4.latlng;
-	            var originalEvent = _ref4.originalEvent;
+	            var marker = _ref4.layer,
+	                latlng = _ref4.latlng,
+	                originalEvent = _ref4.originalEvent;
 	
 	            if (!this.options.openPopupOnClick) {
 	                return;
@@ -2453,10 +2453,11 @@
 	                this._setYears(ui.values[0], ui.values[1]);
 	            }.bind(this)
 	        });
+	        L.DomEvent.on(ui[0], 'mouseover', map.dragging.disable, this).on(ui[0], 'mouseout', map.dragging.enable, this);
 	
-	        ui.on('mousedown', function (event) {
-	            event.stopPropagation();
-	        });
+	        // ui.on('mousedown', function(event) {
+	        // event.stopPropagation();
+	        // });
 	
 	        return ui[0];
 	    },
